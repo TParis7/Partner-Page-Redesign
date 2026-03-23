@@ -235,9 +235,28 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .hero-t .tag{margin-left:auto;margin-right:auto;}
 }
   
-  /* Nav logo fix — partner page lacks p3navlogo script that homepage uses */
+  /* Nav fixes — match homepage alignment, pill CTA, hamburger for mobile */
   .p3-nav-logo img { max-height: 36px; width: auto; object-fit: contain; }
-  .p3-nav { overflow: hidden; }
+  .p3-nav { overflow: visible; position: relative; z-index: 1000; }
+  .p3-nav-links { margin-left: auto; }
+  .p3-nav-cta { border-radius: 100px !important; font-size: 14px !important; padding: 10px 24px !important; }
+  .mob-menu { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; z-index: 1001; }
+  .mob-menu span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all .3s ease; }
+  .mob-menu.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 6px); }
+  .mob-menu.open span:nth-child(2) { opacity: 0; }
+  .mob-menu.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -6px); }
+  .mob-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(26,10,16,0.97); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+  .mob-overlay.open { display: flex; }
+  .mob-overlay a { color: #fff; font-family: 'Inter', sans-serif; font-size: 1.25rem; font-weight: 500; text-decoration: none; opacity: 0.85; transition: opacity .2s; }
+  .mob-overlay a:hover { opacity: 1; }
+  .mob-overlay .p3-nav-cta { background: #D93A3A; border-radius: 100px; padding: 12px 32px; font-weight: 600; font-size: 1rem; opacity: 1; margin-top: 8px; }
+  @media(max-width:768px) {
+    .p3-nav-links { display: none !important; }
+    .p3-nav-cta { display: none !important; }
+    .mob-menu { display: flex; }
+    .p3-nav { padding: 0 16px; height: 64px; }
+    .p3-nav-logo img { max-height: 30px; }
+  }
   /* Layout fix — keep pp-root above Webflow layers */
   #pp-root { position: relative; z-index: 1; }
   `;
@@ -626,8 +645,59 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
     if (form) form.addEventListener('submit', hfs);
   }
 
+  // Nav fix — add hamburger menu for mobile
+  function fixNav() {
+    var nav = document.querySelector('.p3-nav');
+    if (!nav || nav.querySelector('.mob-menu')) return;
+
+    // Create hamburger button
+    var mob = document.createElement('div');
+    mob.className = 'mob-menu';
+    mob.setAttribute('aria-label', 'Menu');
+    mob.innerHTML = '<span></span><span></span><span></span>';
+    nav.appendChild(mob);
+
+    // Create mobile overlay
+    var overlay = document.createElement('div');
+    overlay.className = 'mob-overlay';
+    var navLinks = nav.querySelectorAll('.p3-nav-link');
+    navLinks.forEach(function(a) {
+      var link = document.createElement('a');
+      link.href = a.href;
+      link.textContent = a.textContent.trim();
+      overlay.appendChild(link);
+    });
+    var cta = nav.querySelector('.p3-nav-cta');
+    if (cta) {
+      var ctaClone = document.createElement('a');
+      ctaClone.href = cta.href;
+      ctaClone.textContent = cta.textContent.trim();
+      ctaClone.className = 'p3-nav-cta';
+      overlay.appendChild(ctaClone);
+    }
+    document.body.appendChild(overlay);
+
+    // Toggle handler
+    mob.addEventListener('click', function() {
+      mob.classList.toggle('open');
+      overlay.classList.toggle('open');
+      document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close on link click
+    overlay.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        mob.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  fixNav();
+
   // Footer fix — align partner page footer with homepage
-  (function fixFooter() {
+  // Delayed to run after Webflow finishes component initialization
+  function fixFooter() {
     var f = document.querySelector('.p3-footer');
     if (!f) return;
 
@@ -706,5 +776,8 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
       tc.style.fontSize = '14px';
       bottom.appendChild(tc);
     }
-  })();
+  }
+  // Run after short delay + also on window load to catch late Webflow renders
+  setTimeout(fixFooter, 500);
+  window.addEventListener('load', function() { setTimeout(fixFooter, 200); });
 })();
