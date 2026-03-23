@@ -9,11 +9,11 @@
   const style = document.createElement('style');
   style.textContent = `
 #pp-root {--c:#D93A3A;--ch:#c43232;--cl:#E84A4A;--m:#4a1020;--md:#3a0c18;--dk:#1a1a1a;--wh:#fff;--wg:#FAF7F4;--lt:#999;--bt:#555;--n3:#eee;--n4:#c7c7c7;--n7:#525252;--r:14px;--rl:20px;--rx:28px;--tr:.3s cubic-bezier(.25,.46,.45,.94);--ss:0 2px 8px rgba(20,20,43,.06);--sm:0 4px 20px rgba(20,20,43,.1);--sl:0 8px 40px rgba(20,20,43,.12);--fh:'Space Grotesk',sans-serif;--fb:'Satoshi',sans-serif;--fi:'Inter',sans-serif;--mw:1200px;--sp:48px;}
-#pp-root *,#pp-root *::before,#pp-root *::after{box-sizing:border-box;margin:0;padding:0;}
+:where(#pp-root) *,:where(#pp-root) *::before,:where(#pp-root) *::after{box-sizing:border-box;margin:0;padding:0;}
 #pp-root {scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
 #pp-root {font-family:var(--fb);font-size:18px;line-height:1.6;color:var(--dk);background:var(--wh);overflow-x:hidden;}
-#pp-root img{max-width:100%;height:auto;display:block;}
-#pp-root a{text-decoration:none;color:inherit;transition:color var(--tr);}
+:where(#pp-root) img{max-width:100%;height:auto;display:block;}
+:where(#pp-root) a{text-decoration:none;color:inherit;transition:color var(--tr);}
 .ctn{max-width:var(--mw);margin:0 auto;padding:0 28px;}
 h1,h2,h3,h4{font-family:var(--fh);font-weight:700;line-height:1.15;letter-spacing:-.02em;color:inherit;}
 h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);}h3{font-size:clamp(1.05rem,1.8vw,1.2rem);}
@@ -582,27 +582,31 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
     ppRootEl.querySelectorAll('.fade-in, .dl-step').forEach(el => o.observe(el));
   }
 
-  // Form handler
+  // Form handler — opens Gmail compose in new tab
   function hfs(e) {
     e.preventDefault();
     const b = e.target.querySelector('button[type="submit"]');
     b.textContent = 'Sending...';
     b.disabled = true;
-    setTimeout(() => {
-      b.textContent = 'Submitted!';
+    var fn = e.target.querySelector('input').value || '';
+    var ln = (document.getElementById('ln') || {}).value || '';
+    var em = (document.getElementById('em') || {}).value || '';
+    var inst = (document.getElementById('inst') || {}).value || '';
+    var rl = (document.getElementById('rl') || {}).value || '';
+    var intVal = (document.getElementById('int') || {}).value || '';
+    var msg = (document.getElementById('msg') || {}).value || '';
+    var subject = 'Partnership Inquiry from ' + inst;
+    var body = 'Name: ' + fn + ' ' + ln + '\nEmail: ' + em + '\nInstitution: ' + inst + '\nRole: ' + rl + '\nInterest: ' + intVal + '\n\nMessage: ' + msg;
+    var gmailUrl = 'https://mail.google.com/mail/?view=cm&to=team@pulseofp3.org&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var mailtoUrl = 'mailto:team@pulseofp3.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    setTimeout(function() {
+      b.textContent = 'Opening email...';
       b.style.background = '#05c168';
       b.style.borderColor = '#05c168';
-      const s = encodeURIComponent('Partnership Inquiry from ' + document.getElementById('inst').value);
-      const bd = encodeURIComponent(
-        'Name: ' + e.target.querySelector('input').value + ' ' + document.getElementById('ln').value + '\\n' +
-        'Email: ' + document.getElementById('em').value + '\\n' +
-        'Institution: ' + document.getElementById('inst').value + '\\n' +
-        'Role: ' + document.getElementById('rl').value + '\\n' +
-        'Interest: ' + document.getElementById('int').value + '\\n\\n' +
-        'Message: ' + document.getElementById('msg').value
-      );
-      window.location.href = 'mailto:team@pulseofp3.org?subject=' + s + '&body=' + bd;
-    }, 800);
+      var w = window.open(gmailUrl, '_blank');
+      if (!w || w.closed) { window.location.href = mailtoUrl; }
+      setTimeout(function() { b.textContent = 'Submit Inquiry'; b.style.background = ''; b.style.borderColor = ''; b.disabled = false; }, 3000);
+    }, 600);
   }
 
   // Smooth scroll for anchor links
