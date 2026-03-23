@@ -625,4 +625,86 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
     const form = ppRootEl.querySelector('form');
     if (form) form.addEventListener('submit', hfs);
   }
+
+  // Footer fix — align partner page footer with homepage
+  (function fixFooter() {
+    var f = document.querySelector('.p3-footer');
+    if (!f) return;
+
+    // Tagline
+    var tl = f.querySelector('.p3-footer-tagline');
+    if (tl && tl.textContent.indexOf('Free on') === -1)
+      tl.textContent = 'Unlocking life-changing opportunities for young visionaries. Free on iOS & Android.';
+
+    // Location
+    var loc = f.querySelector('.p3-footer-location');
+    if (loc && loc.textContent.indexOf('Founded') === -1)
+      loc.textContent = 'Chicago, IL \u00b7 Founded 2018';
+
+    // PLATFORM column order — swap For Institutions and For Mentors
+    var links = f.querySelectorAll('.p3-footer-link');
+    var fi = null, fm = null;
+    links.forEach(function(a) {
+      if (a.textContent.trim() === 'For Institutions') fi = a;
+      if (a.textContent.trim() === 'For Mentors') fm = a;
+    });
+    if (fi && fm && fi.compareDocumentPosition(fm) & Node.DOCUMENT_POSITION_FOLLOWING)
+      fi.parentNode.insertBefore(fm, fi);
+
+    // ABOUT column link URLs
+    links.forEach(function(a) {
+      var t = a.textContent.trim();
+      if (t === 'Annual Report' && a.getAttribute('href') !== 'https://drive.google.com/file/d/1IrFocCsboO6mLZsG3GAlHjmKv_V7a9Sn/view?usp=drive_link') {
+        a.href = 'https://drive.google.com/file/d/1IrFocCsboO6mLZsG3GAlHjmKv_V7a9Sn/view?usp=drive_link';
+        a.target = '_blank';
+      }
+      if (t === 'Press' && a.getAttribute('href') !== '/about/in-the-press')
+        a.href = '/about/in-the-press';
+    });
+
+    // CONNECT column — remove email link, add YouTube + Donate
+    var emailLink = f.querySelector('a[href^="mailto:team"]');
+    if (emailLink) emailLink.remove();
+
+    var linkedin = null;
+    f.querySelectorAll('.p3-footer-link').forEach(function(a) {
+      if (a.textContent.trim() === 'LinkedIn') linkedin = a;
+    });
+    var hasYT = false;
+    f.querySelectorAll('.p3-footer-link').forEach(function(a) {
+      if (a.textContent.trim() === 'YouTube') hasYT = true;
+    });
+    if (linkedin && !hasYT) {
+      var yt = document.createElement('a');
+      yt.href = 'https://www.youtube.com/@PulseofPerseveranceProject';
+      yt.className = linkedin.className;
+      yt.textContent = 'YouTube';
+      yt.target = '_blank';
+      linkedin.parentNode.insertBefore(yt, linkedin.nextSibling);
+      var dn = document.createElement('a');
+      dn.href = '/donate';
+      dn.className = linkedin.className;
+      dn.textContent = 'Donate';
+      yt.parentNode.insertBefore(dn, yt.nextSibling);
+    }
+
+    // Bottom bar — copyright + Terms & Conditions
+    var bottom = f.querySelector('.p3-footer-bottom');
+    if (bottom && bottom.textContent.indexOf('All rights') === -1) {
+      bottom.innerHTML = '';
+      bottom.style.display = 'flex';
+      bottom.style.justifyContent = 'space-between';
+      bottom.style.alignItems = 'center';
+      var cp = document.createElement('p');
+      cp.textContent = '\u00a9 2026 Pulse of Perseverance Project. All rights reserved.';
+      cp.style.cssText = 'margin:0;color:rgba(255,255,255,0.5);font-size:14px;';
+      bottom.appendChild(cp);
+      var tc = document.createElement('a');
+      tc.href = '/app-terms-conditions';
+      tc.textContent = 'Terms & Conditions';
+      tc.className = 'p3-footer-link';
+      tc.style.fontSize = '14px';
+      bottom.appendChild(tc);
+    }
+  })();
 })();
