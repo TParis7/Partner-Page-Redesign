@@ -235,6 +235,9 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .hero-t .tag{margin-left:auto;margin-right:auto;}
 }
   
+  /* Nav logo fix — partner page lacks p3navlogo script that homepage uses */
+  .p3-nav-logo img { max-height: 36px; width: auto; object-fit: contain; }
+  .p3-nav { overflow: hidden; }
   /* Layout fix — keep pp-root above Webflow layers */
   #pp-root { position: relative; z-index: 1; }
   `;
