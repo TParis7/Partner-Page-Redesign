@@ -27,7 +27,8 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 .bs{padding:9px 20px;font-size:.75rem;}.bl{padding:14px 32px;font-size:.9rem;}
 .ba::after{content:'\u2192';margin-left:3px;transition:transform var(--tr);}.ba:hover::after{transform:translateX(3px);}
 
-/* Nav styles removed — using Webflow native nav styling */
+/* Nav logo image constraint (rest of nav handled natively in Webflow) */
+.p3-nav-logo img { max-height: 36px; width: auto; object-fit: contain; }
 
 /* ===== HERO ===== */
 .hero{position:relative;display:flex;align-items:center;background:linear-gradient(135deg,var(--md),var(--m) 40%,#2a0e16);overflow:hidden;padding:100px 0 64px;min-height:80vh;}
@@ -730,13 +731,13 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
       bottom.style.alignItems = 'center';
       var cp = document.createElement('p');
       cp.textContent = '\u00a9 2026 Pulse of Perseverance Project. All rights reserved.';
-      cp.style.cssText = 'margin:0;color:rgba(255,255,255,0.5);font-size:14px;';
+      cp.style.cssText = 'margin:0;color:rgba(255,255,255,0.4);font-size:12px;';
       bottom.appendChild(cp);
       var tc = document.createElement('a');
       tc.href = '/app-terms-conditions';
       tc.textContent = 'Terms & Conditions';
       tc.className = 'p3-footer-link';
-      tc.style.fontSize = '14px';
+      tc.style.fontSize = '12px';
       bottom.appendChild(tc);
     }
   }
