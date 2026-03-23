@@ -81,6 +81,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 .dl-moat{margin-top:8px;padding:7px 12px;border-radius:7px;background:rgba(217,58,58,.06);font-size:.72rem;color:var(--c);font-weight:500;}
 .dl-img{display:flex;align-items:center;justify-content:center;}
 .dl-img-ph{width:100%;max-width:320px;height:180px;background:var(--wg);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px dashed var(--n4);color:var(--lt);font-size:.78rem;gap:4px;}.dl-img-ph span{font-size:1.5rem;}
+.dl-dash-img{width:100%;max-width:380px;height:auto;object-fit:contain;border-radius:var(--r);filter:drop-shadow(0 4px 20px rgba(0,0,0,.08));}
 .dl-banner{text-align:center;padding:20px;margin-top:24px;background:var(--dk);color:var(--wh);border-radius:var(--rx);}
 .dl-banner p{font-family:var(--fh);font-size:.95rem;font-weight:500;max-width:600px;margin:0 auto;line-height:1.5;}
 
@@ -186,7 +187,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
   .hero-g{grid-template-columns:1fr;}.hero-net{display:none;}.hero{min-height:auto;padding:90px 0 40px;}
-  .dl-step{grid-template-columns:1fr;gap:16px;}.dl-step:nth-child(even) .dl-txt{order:1;}.dl-step:nth-child(even) .dl-img{order:2;}.dl-img-ph{max-width:100%;height:140px;}
+  .dl-step{grid-template-columns:1fr;gap:16px;}.dl-step:nth-child(even) .dl-txt{order:1;}.dl-step:nth-child(even) .dl-img{order:2;}.dl-img-ph{max-width:100%;height:140px;}.dl-dash-img{max-width:100%;}
   .pr-heads,.pr-row,.pr-cta{grid-template-columns:130px repeat(3,1fr);}
   .ct-grid{grid-template-columns:1fr;}.ft-grid{grid-template-columns:1fr 1fr;}
   .wn-row2{max-width:100%;}
@@ -242,7 +243,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .pp-mob-menu.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 6px); }
   .pp-mob-menu.open span:nth-child(2) { opacity: 0; }
   .pp-mob-menu.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -6px); }
-  .pp-mob-menu span { transition: all .3s ease; }
+  .pp-mob-menu span { display: block; width: 22px; height: 2px; background-color: #fff; border-radius: 2px; transition: all .3s ease; }
   .pp-mob-overlay.open { display: flex !important; }
   .pp-mob-overlay-link:hover { opacity: 1; }
   .pp-mob-overlay-cta:hover { opacity: 0.9; }
@@ -401,10 +402,10 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 <div class="ctn">
 <div class="dl-hd fade-in"><div class="tag tag-l">The Platform</div><h2>Four layers of data no competitor can replicate</h2><p class="sub mx">Each layer compounds — building a dataset that takes years to replicate.</p></div>
 <div class="dl-steps">
-  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">01</div><h3>Engagement Data</h3></div><p>Baseline behavioral patterns that establish each student's unique mentorship fingerprint.</p><div class="dl-feats"><div class="dl-feat">Session frequency &amp; duration</div><div class="dl-feat">Mentor Q&amp;A response rates</div><div class="dl-feat">Content engagement patterns</div><div class="dl-feat">App retention &amp; churn signals</div></div><div class="dl-moat">&#128274; Baseline data — establishes mentorship fingerprint</div></div><div class="dl-img"><div class="dl-img-ph"><span>&#128202;</span>Image placeholder</div></div></div>
-  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">02</div><h3>Milestone Progression</h3></div><p>Student-volunteered and verified checkpoints no competitor captures at scale.</p><div class="dl-feats"><div class="dl-feat">Campus visits &amp; exam results</div><div class="dl-feat">Major selection checkpoints</div><div class="dl-feat">Scholarship applications</div><div class="dl-feat">Internship milestones secured</div></div><div class="dl-moat">&#128274; Student-volunteered &amp; verified — no competitor captures this</div></div><div class="dl-img"><div class="dl-img-ph"><span>&#127942;</span>Image placeholder</div></div></div>
-  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">03</div><h3>Outcome Attribution</h3></div><p>The causal link between mentorship activity and real academic and career outcomes.</p><div class="dl-feats"><div class="dl-feat">College enrollment confirmed</div><div class="dl-feat">Degree completion tracked</div><div class="dl-feat">Job placements &amp; field match</div><div class="dl-feat">Academic &amp; career outcomes</div></div><div class="dl-moat">&#128274; Links mentorship directly to outcomes — proven causally</div></div><div class="dl-img"><div class="dl-img-ph"><span>&#128200;</span>Image placeholder</div></div></div>
-  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">04</div><h3>Longitudinal Impact</h3></div><p>Multi-year, cross-institution career trajectory tracking — our exclusive data moat.</p><div class="dl-feats"><div class="dl-feat">5-10 year career trajectories</div><div class="dl-feat">Social mobility index scores</div><div class="dl-feat">Macro trend analysis</div><div class="dl-feat">STEM &amp; leadership pipeline</div></div><div class="dl-moat">&#128274; Multi-year cross-institution tracking — our exclusive moat</div></div><div class="dl-img"><div class="dl-img-ph"><span>&#128640;</span>Image placeholder</div></div></div>
+  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">01</div><h3>Engagement Data</h3></div><p>Baseline behavioral patterns that establish each student's unique mentorship fingerprint.</p><div class="dl-feats"><div class="dl-feat">Session frequency &amp; duration</div><div class="dl-feat">Mentor Q&amp;A response rates</div><div class="dl-feat">Content engagement patterns</div><div class="dl-feat">App retention &amp; churn signals</div></div><div class="dl-moat">&#128274; Baseline data — establishes mentorship fingerprint</div></div><div class="dl-img"><img src="https://tparis7.github.io/Partner-Page-Redesign/images/1-app-retention.png" alt="App Retention Dashboard" class="dl-dash-img"></div></div>
+  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">02</div><h3>Milestone Progression</h3></div><p>Student-volunteered and verified checkpoints no competitor captures at scale.</p><div class="dl-feats"><div class="dl-feat">Campus visits &amp; exam results</div><div class="dl-feat">Major selection checkpoints</div><div class="dl-feat">Scholarship applications</div><div class="dl-feat">Internship milestones secured</div></div><div class="dl-moat">&#128274; Student-volunteered &amp; verified — no competitor captures this</div></div><div class="dl-img"><img src="https://tparis7.github.io/Partner-Page-Redesign/images/2-milestone-progression.png" alt="Milestone Progression Dashboard" class="dl-dash-img"></div></div>
+  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">03</div><h3>Outcome Attribution</h3></div><p>The causal link between mentorship activity and real academic and career outcomes.</p><div class="dl-feats"><div class="dl-feat">College enrollment confirmed</div><div class="dl-feat">Degree completion tracked</div><div class="dl-feat">Job placements &amp; field match</div><div class="dl-feat">Academic &amp; career outcomes</div></div><div class="dl-moat">&#128274; Links mentorship directly to outcomes — proven causally</div></div><div class="dl-img"><img src="https://tparis7.github.io/Partner-Page-Redesign/images/3-outcome-attribution.png" alt="Outcome Attribution Dashboard" class="dl-dash-img"></div></div>
+  <div class="dl-step"><div class="dl-txt"><div class="dl-head"><div class="dl-num">04</div><h3>Longitudinal Impact</h3></div><p>Multi-year, cross-institution career trajectory tracking — our exclusive data moat.</p><div class="dl-feats"><div class="dl-feat">5-10 year career trajectories</div><div class="dl-feat">Social mobility index scores</div><div class="dl-feat">Macro trend analysis</div><div class="dl-feat">STEM &amp; leadership pipeline</div></div><div class="dl-moat">&#128274; Multi-year cross-institution tracking — our exclusive moat</div></div><div class="dl-img"><img src="https://tparis7.github.io/Partner-Page-Redesign/images/4-longitudinal-impact.png" alt="Longitudinal Impact Dashboard" class="dl-dash-img"></div></div>
 </div>
 <div class="dl-banner fade-in"><p>No EdTech competitor captures mentorship-to-career data longitudinally. This dataset takes years to build. <span class="tc">We're already launching.</span></p></div>
 </div>
@@ -568,6 +569,14 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   // Toggle pricing accordion card
   function togglePrCard(el) {
     el.classList.toggle("open");
+  }
+
+  // OG image injection (same image as homepage)
+  if (!document.querySelector('meta[property="og:image"]')) {
+    var ogImg = document.createElement('meta');
+    ogImg.setAttribute('property', 'og:image');
+    ogImg.setAttribute('content', 'https://cdn.prod.website-files.com/69b02f65f0068e9fb16f09f7/69b176b499f6fec2ebce26b7_1.png');
+    document.head.appendChild(ogImg);
   }
 
   // Nav scroll effect
