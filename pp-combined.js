@@ -261,7 +261,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 <div class="hero-t">
   <div class="tag tag-d">For Partners &amp; Institutions</div>
   <h1>Where student journeys become <span class="tc">institutional intelligence</span></h1>
-  <p class="hero-d">P3 is the AI-powered mentorship platform that connects underserved students with industry mentors — and turns those connections into the longitudinal outcome data your institution needs.</p>
+  <p class="hero-d">P3 is the AI-powered mentorship platform that connects underserved students with industry mentors — and turns those connections into the outcome data your institution needs.</p>
   <div class="hero-cta"><a href="mailto:team@pulseofp3.org?subject=Partner%20Demo%20Request" class="btn bp bl ba">Schedule a Demo</a><a href="#resources" class="btn bo">Download a Deck</a></div>
 </div>
 <div class="hero-net">
