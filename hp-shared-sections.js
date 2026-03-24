@@ -91,12 +91,19 @@
     }
 
     // 2b. Fix "For Institutions" link to point to new partner page
-    var navLinks = nav.querySelectorAll('.p3-nav-link');
-    navLinks.forEach(function(link) {
-      if (link.textContent.trim() === 'For Institutions') {
-        link.href = '/partner';
-      }
-    });
+    // Must run after Webflow JS initializes navbar (which resets hrefs),
+    // so we use both window.load and a fallback setTimeout
+    function fixInstitutionsLink() {
+      var allNavLinks = document.querySelectorAll('.p3-nav .p3-nav-link');
+      allNavLinks.forEach(function(link) {
+        if (link.textContent.trim() === 'For Institutions' && link.getAttribute('href') !== '/partner') {
+          link.href = '/partner';
+        }
+      });
+    }
+    window.addEventListener('load', fixInstitutionsLink);
+    setTimeout(fixInstitutionsLink, 2000);
+    setTimeout(fixInstitutionsLink, 5000);
 
     // 3. Add hamburger menu (if not already present)
     if (!nav.querySelector('.pp-mob-menu')) {
