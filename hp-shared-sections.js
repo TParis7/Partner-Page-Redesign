@@ -90,6 +90,14 @@
       linksDiv.insertBefore(homeLink, linksDiv.firstChild);
     }
 
+    // 2b. Fix "For Institutions" link to point to new partner page
+    var navLinks = nav.querySelectorAll('.p3-nav-link');
+    navLinks.forEach(function(link) {
+      if (link.textContent.trim() === 'For Institutions') {
+        link.href = '/partner';
+      }
+    });
+
     // 3. Add hamburger menu (if not already present)
     if (!nav.querySelector('.pp-mob-menu')) {
       var hamb = document.createElement('div');
