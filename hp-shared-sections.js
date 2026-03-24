@@ -12,6 +12,10 @@
     '.p3-nav .p3-nav-logo img { max-height: 36px !important; width: auto !important; object-fit: contain; }',
     '.p3-nav .p3-nav-link { color: rgba(255,255,255,0.85) !important; }',
 
+    // Nav mobile responsive overrides (counteract homepage page scripts that force wrong sizes)
+    '@media(max-width: 991px) { .p3-nav { padding: 16px !important; height: 64px !important; } }',
+    '@media(max-width: 991px) { .p3-nav .p3-nav-logo img { max-height: 36px !important; height: 36px !important; } }',
+
     // Nav scroll effect
     '.p3-nav.scrolled { background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(20px) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }',
 
@@ -63,6 +67,14 @@
     font.rel = 'stylesheet';
     font.href = 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap';
     document.head.appendChild(font);
+  }
+
+  // Load Inter for nav links (matches partner page font loading)
+  if (!document.querySelector('link[href*="family=Inter"]')) {
+    var interFont = document.createElement('link');
+    interFont.rel = 'stylesheet';
+    interFont.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap';
+    document.head.appendChild(interFont);
   }
 
   // ========== NAV UPDATES ==========
