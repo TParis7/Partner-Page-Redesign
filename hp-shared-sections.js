@@ -105,6 +105,12 @@
     setTimeout(fixInstitutionsLink, 2000);
     setTimeout(fixInstitutionsLink, 5000);
 
+    // 2c. Move CTA out of .p3-nav-links so it's a sibling (matches partner page structure)
+    var ctaInLinks = linksDiv ? linksDiv.querySelector('.p3-nav-cta') : null;
+    if (ctaInLinks) {
+      nav.insertBefore(ctaInLinks, linksDiv.nextSibling);
+    }
+
     // 3. Add hamburger menu (if not already present)
     if (!nav.querySelector('.pp-mob-menu')) {
       var hamb = document.createElement('div');
