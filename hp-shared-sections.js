@@ -288,6 +288,35 @@
     }
   }
 
+  // ========== BUTTON FIXES ==========
+  // Dashboard Preview: "Request a Demo →" → "Learn More" linking to /partner
+  var dashPreview = document.querySelector('.p3-dash-preview');
+  if (dashPreview) {
+    var dashBtn = dashPreview.querySelector('a.p3-btn-light');
+    if (dashBtn && dashBtn.textContent.trim().includes('Request a Demo')) {
+      dashBtn.textContent = 'Learn More →';
+      dashBtn.href = '/partner';
+    }
+  }
+
+  // Dual CTA: "Request a Demo →" → "Contact Us" linking to partner page contact section
+  var dualCta = document.querySelector('.p3-dual-cta');
+  if (dualCta) {
+    var ctaBtns = dualCta.querySelectorAll('a');
+    ctaBtns.forEach(function(btn) {
+      if (btn.textContent.trim().includes('Request a Demo')) {
+        btn.textContent = 'Contact Us →';
+        btn.href = '/partner#contact';
+      }
+    });
+  }
+
+  // ========== REMOVE ROI CALCULATOR FROM HOMEPAGE ==========
+  var roiCalc = document.querySelector('.p3-roi-calc');
+  if (roiCalc) {
+    roiCalc.parentNode.removeChild(roiCalc);
+  }
+
   // ========== CLEANUP ==========
   // Remove empty section at body level (index ~10, no class)
   var bodySections = document.body.querySelectorAll(':scope > section');
