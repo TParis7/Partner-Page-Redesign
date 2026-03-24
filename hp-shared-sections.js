@@ -8,8 +8,9 @@
     ':root{--pp-c:#D93A3A;--pp-wh:#fff;--pp-dk:#1a1a1a;--pp-lt:#999;--pp-n3:#eee;--pp-r:14px;--pp-tr:.3s cubic-bezier(.25,.46,.45,.94);}',
 
     // Nav style normalization (match partner page exactly)
-    '.p3-nav { padding: 16px 40px !important; }',
+    '.p3-nav { padding: 16px 40px !important; height: auto !important; }',
     '.p3-nav .p3-nav-logo img { max-height: 36px !important; width: auto !important; object-fit: contain; }',
+    '.p3-nav .p3-nav-link { color: rgba(255,255,255,0.85) !important; }',
 
     // Nav scroll effect
     '.p3-nav.scrolled { background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(20px) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }',
