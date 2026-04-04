@@ -197,7 +197,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 }
 @media(max-width:768px){
   #pp-root{--sp:32px;}.ctn{padding:0 16px;}
-  .hero{padding:110px 0 56px;}.hero h1{font-size:1.75rem;}.hero-d{font-size:1rem;}.hero-cta{flex-direction:column;}.hero-cta .btn{width:100%;}
+  .hero{padding:120px 0 56px;}.hero h1{font-size:1.75rem;}.hero-d{font-size:1rem;}.hero-cta{flex-direction:column;}.hero-cta .btn{width:100%;}
   .wn-row1{grid-template-columns:1fr;}.wn-row2{grid-template-columns:1fr;max-width:100%;}.wn-card{padding:18px 14px;}
   .ws-grid{grid-template-columns:1fr;}.ci-grid{grid-template-columns:1fr;}.rs-grid{grid-template-columns:1fr;}
   .pr-heads,.pr-row,.pr-cta{grid-template-columns:1fr;}.pr-rl,.pr-lh{display:none;}.pr-heads>div{padding:14px 12px;}
@@ -245,6 +245,12 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .ct-info h2,.ct-info>p{text-align:center!important;}
   .ct-info .tag{margin-left:auto!important;margin-right:auto!important;display:inline-block!important;}
   .ct-info .btn,.ct-info a.btn{margin-left:auto!important;margin-right:auto!important;display:inline-flex!important;}
+  /* Center the contact methods (email/HQ) — icon + text on center axis; hide 3rd item (Website) */
+  .ct-methods{align-items:center!important;}
+  .ct-m{justify-content:center!important;width:100%;max-width:280px;margin-left:auto!important;margin-right:auto!important;}
+  .ct-m:nth-child(3){display:none!important;}
+  /* Center the "Send us your details" form header */
+  .ct-form h3{text-align:center!important;}
   /* Webflow-native footer — compact 2-column grid on mobile */
   .p3-footer-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:24px 16px!important;}
   .p3-footer-brand{grid-column:1/-1!important;}
