@@ -249,6 +249,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .ct-methods{align-items:center!important;}
   .ct-m{justify-content:center!important;width:100%;max-width:280px;margin-left:auto!important;margin-right:auto!important;}
   .ct-m:nth-child(3){display:none!important;}
+  .ct-mi{display:none!important;}
   /* Center the "Send us your details" form header */
   .ct-form h3{text-align:center!important;}
   /* Webflow-native footer — compact 2-column grid on mobile */
