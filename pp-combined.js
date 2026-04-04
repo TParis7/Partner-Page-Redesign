@@ -24,7 +24,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 .bp{background:var(--c);color:var(--wh);border-color:var(--c);box-shadow:0 4px 14px rgba(217,58,58,.3);}.bp:hover{background:var(--ch);transform:translateY(-1px);}
 .bo{background:0;color:var(--wh);border-color:rgba(255,255,255,.3);}.bo:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5);}
 .bod{background:0;color:var(--dk);border-color:var(--n4);}.bod:hover{border-color:var(--c);color:var(--c);}
-.bs{padding:9px 20px;font-size:.75rem;}.bl{padding:14px 32px;font-size:.9rem;}
+.bs{padding:9px 20px;font-size:.75rem;}.bl{padding:14px 32px;font-size:14px;}
 .ba::after{content:'\u2192';margin-left:3px;transition:transform var(--tr);}.ba:hover::after{transform:translateX(3px);}
 
 /* Nav logo image constraint (rest of nav handled natively in Webflow) */
@@ -202,10 +202,10 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .ws-grid{grid-template-columns:1fr;}.ci-grid{grid-template-columns:1fr;}.rs-grid{grid-template-columns:1fr;}
   .pr-heads,.pr-row,.pr-cta{grid-template-columns:1fr;}.pr-rl,.pr-lh{display:none;}.pr-heads>div{padding:14px 12px;}
   .gl-item{width:220px;height:150px;}
-  .ft-grid{grid-template-columns:1fr;gap:20px;}.ft-bot{flex-direction:column;gap:8px;text-align:center;}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:24px 16px;}.ft-brand{grid-column:1/-1;}.ft-bot{flex-direction:column;gap:8px;text-align:center;}
   .fr{grid-template-columns:1fr;}.dl-feats{grid-template-columns:1fr;}
 }
-@media(max-width:480px){.hero h1{font-size:1.5rem;}.btn{padding:10px 20px;font-size:.78rem;}.bl{padding:12px 24px;font-size:.82rem;}}
+@media(max-width:480px){.hero h1{font-size:1.5rem;}.btn{padding:10px 20px;font-size:.78rem;}}
 
 
 
