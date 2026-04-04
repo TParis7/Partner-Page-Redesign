@@ -205,7 +205,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .ft-grid{grid-template-columns:1fr 1fr;gap:24px 16px;}.ft-brand{grid-column:1/-1;}.ft-bot{flex-direction:column;gap:8px;text-align:center;}
   .fr{grid-template-columns:1fr;}.dl-feats{grid-template-columns:1fr;}
 }
-@media(max-width:480px){.hero h1{font-size:1.5rem;}.btn{padding:10px 20px;font-size:.78rem;}}
+@media(max-width:480px){.hero h1{font-size:1.75rem;}.hero-cta .btn{padding:14px 32px;font-size:14px;}}
 
 
 
@@ -240,6 +240,15 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   .hero-d{text-align:center;margin-left:auto;margin-right:auto;}
   .hero-cta{justify-content:center;}
   .hero-t .tag{margin-left:auto;margin-right:auto;}
+  /* Ready to transform... CTA block — center header, sub, and Get Started button */
+  .ct-info{text-align:center!important;}
+  .ct-info h2,.ct-info>p{text-align:center!important;}
+  .ct-info .tag{margin-left:auto!important;margin-right:auto!important;display:inline-block!important;}
+  .ct-info .btn,.ct-info a.btn{margin-left:auto!important;margin-right:auto!important;display:inline-flex!important;}
+  /* Webflow-native footer — compact 2-column grid on mobile */
+  .p3-footer-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:24px 16px!important;}
+  .p3-footer-brand{grid-column:1/-1!important;}
+  .p3-footer-bottom{flex-wrap:wrap!important;justify-content:center!important;text-align:center!important;}
 }
 
   /* Nav hamburger toggle states — elements are native Webflow, JS adds .open class */
