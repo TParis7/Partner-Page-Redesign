@@ -280,7 +280,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 <div class="hero-t">
   <h1>Where student journeys become <span class="tc">institutional intelligence</span></h1>
   <p class="hero-d">P3 is the AI-powered mentorship platform that connects underserved students with industry mentors — and turns those connections into the outcome data your institution needs.</p>
-  <div class="hero-cta"><a href="mailto:team@pulseofp3.org?subject=Partner%20Demo%20Request" class="btn bp bl ba">Schedule a Demo</a><a href="#resources" class="btn bo">Download a Deck</a></div>
+  <div class="hero-cta"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bp bl ba">Schedule a Demo</a><a href="#resources" class="btn bo">Download a Deck</a></div>
 </div>
 <div class="hero-net">
   <svg class="net-lines" viewBox="0 0 520 400" fill="none">
@@ -425,7 +425,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   <div class="pr-row"><div class="pr-rl">Customer success manager</div><div class="pr-rc"><span class="da">&mdash;</span></div><div class="pr-rc pr-ri"><span class="ck">&#10003;</span></div><div class="pr-rc"><span class="ck">&#10003;</span></div></div>
   <div class="pr-row"><div class="pr-rl">Co-branded student portal</div><div class="pr-rc"><span class="da">&mdash;</span></div><div class="pr-rc pr-ri"><span class="da" style="background:rgba(255,255,255,.12);color:rgba(255,255,255,.35);">&mdash;</span></div><div class="pr-rc"><span class="ck">&#10003;</span></div></div>
   <div class="pr-row"><div class="pr-rl">API access &amp; integrations</div><div class="pr-rc"><span class="da">&mdash;</span></div><div class="pr-rc pr-ri"><span class="da" style="background:rgba(255,255,255,.12);color:rgba(255,255,255,.35);">&mdash;</span></div><div class="pr-rc"><span class="ck">&#10003;</span></div></div>
-  <div class="pr-cta"><div class="pr-cc" style="background:var(--wg);"></div><div class="pr-cc"><a href="mailto:team@pulseofp3.org?subject=Partnership%20Inquiry%20-%20Essential" class="btn bod bs">Get Started</a></div><div class="pr-cc pr-ci"><a href="mailto:team@pulseofp3.org?subject=Partner%20Demo%20Request" class="btn bp bs">Schedule a Demo</a></div><div class="pr-cc"><a href="mailto:team@pulseofp3.org?subject=Partnership%20Inquiry" class="btn bod bs">Contact Sales</a></div></div>
+  <div class="pr-cta"><div class="pr-cc" style="background:var(--wg);"></div><div class="pr-cc"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bod bs">Get Started</a></div><div class="pr-cc pr-ci"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bp bs">Schedule a Demo</a></div><div class="pr-cc"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bod bs">Contact Sales</a></div></div>
 
 
 </div>
@@ -438,7 +438,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
       <div class="pr-mob-feat"><span class="ck">&#10003;</span>Dedicated onboarding</div>
       <div class="pr-mob-feat"><span class="da">&mdash;</span><span style="color:var(--lt);">Analytics dashboard</span></div>
       <div class="pr-mob-feat"><span class="da">&mdash;</span><span style="color:var(--lt);">Industry benchmarking</span></div>
-      <div class="pr-mob-cta"><a href="mailto:team@pulseofp3.org?subject=Partnership%20Inquiry%20-%20Essential" class="btn bod bs">Get Started</a></div>
+      <div class="pr-mob-cta"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bod bs">Get Started</a></div>
     </div></div>
   </div>
   <div class="pr-mob-card open" onclick="togglePrCard(this)">
@@ -451,7 +451,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
       <div class="pr-mob-feat"><span class="ck">&#10003;</span>Industry benchmarking</div>
       <div class="pr-mob-feat"><span class="ck">&#10003;</span>Data workshops &amp; training</div>
       <div class="pr-mob-feat"><span class="ck">&#10003;</span>Customer success manager</div>
-      <div class="pr-mob-cta"><a href="mailto:team@pulseofp3.org?subject=Partner%20Demo%20Request" class="btn bp bs">Schedule a Demo</a></div>
+      <div class="pr-mob-cta"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bp bs">Schedule a Demo</a></div>
     </div></div>
   </div>
   <div class="pr-mob-card open" onclick="togglePrCard(this)">
@@ -460,7 +460,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
       <div class="pr-mob-feat"><span class="ck">&#10003;</span>Everything in Insights</div>
       <div class="pr-mob-feat"><span class="ck">&#10003;</span>Co-branded student portal</div>
       <div class="pr-mob-feat"><span class="ck">&#10003;</span>API access &amp; integrations</div>
-      <div class="pr-mob-cta"><a href="mailto:team@pulseofp3.org?subject=Partnership%20Inquiry" class="btn bod bs">Contact Sales</a></div>
+      <div class="pr-mob-cta"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bod bs">Contact Sales</a></div>
     </div></div>
   </div>
 </div>
@@ -573,7 +573,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
     ppRootEl.querySelectorAll('.fade-in, .dl-step').forEach(el => o.observe(el));
   }
 
-  // Form handler — opens Gmail compose in new tab
+  // Form handler — submits to Google Forms
   function hfs(e) {
     e.preventDefault();
     const b = e.target.querySelector('button[type="submit"]');
@@ -586,18 +586,28 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
     var rl = (document.getElementById('rl') || {}).value || '';
     var intVal = (document.getElementById('int') || {}).value || '';
     var msg = (document.getElementById('msg') || {}).value || '';
-    var subject = 'Partnership Inquiry from ' + inst;
-    var body = 'Name: ' + fn + ' ' + ln + '\nEmail: ' + em + '\nInstitution: ' + inst + '\nRole: ' + rl + '\nInterest: ' + intVal + '\n\nMessage: ' + msg;
-    var gmailUrl = 'https://mail.google.com/mail/?view=cm&to=team@pulseofp3.org&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    var mailtoUrl = 'mailto:team@pulseofp3.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    setTimeout(function() {
-      b.textContent = 'Opening email...';
+    var gfUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCoAEUBQ4X8IlEgOGibYUkS6HFDZc6xTR80ZOEGdi7WdHIlQ/formResponse';
+    var fd = new FormData();
+    fd.append('entry.1615114748', fn);
+    fd.append('entry.164020025', ln);
+    fd.append('entry.1731104243', em);
+    fd.append('entry.1595946960', inst);
+    fd.append('entry.905687637', rl);
+    fd.append('entry.1625149740', intVal);
+    fd.append('entry.65005225', msg);
+    fetch(gfUrl, { method: 'POST', mode: 'no-cors', body: fd }).then(function() {
+      b.textContent = 'Sent ✓';
       b.style.background = '#05c168';
       b.style.borderColor = '#05c168';
-      var w = window.open(gmailUrl, '_blank');
-      if (!w || w.closed) { window.location.href = mailtoUrl; }
+      e.target.reset();
       setTimeout(function() { b.textContent = 'Submit Inquiry'; b.style.background = ''; b.style.borderColor = ''; b.disabled = false; }, 3000);
-    }, 600);
+    }).catch(function() {
+      b.textContent = 'Error — try again';
+      b.style.background = '#c13535';
+      b.style.borderColor = '#c13535';
+      b.disabled = false;
+      setTimeout(function() { b.textContent = 'Submit Inquiry'; b.style.background = ''; b.style.borderColor = ''; }, 3000);
+    });
   }
 
   // Smooth scroll for anchor links
