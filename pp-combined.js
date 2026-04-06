@@ -525,7 +525,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
   <div class="ct-m"><div class="ct-mi"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D93A3A" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><div class="ct-ml">Website</div><div class="ct-mv">www.pulseofp3.org</div></div></div>
 </div></div>
 <div class="ct-form fade-in"><h3>Send us your details</h3>
-<form onsubmit="hfs(event)">
+<form>
   <div class="fr"><div class="fg"><label class="fl">First Name</label><input type="text" class="fi" placeholder="Jane" required></div><div class="fg"><label class="fl">Last Name</label><input type="text" class="fi" id="ln" placeholder="Smith" required></div></div>
   <div class="fg"><label class="fl">Work Email</label><input type="email" class="fi" id="em" placeholder="jane@university.edu" required></div>
   <div class="fg"><label class="fl">Institution</label><input type="text" class="fi" id="inst" placeholder="University of Example" required></div>
@@ -621,7 +621,8 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
     });
   }
 
-  // Attach form handler to form if it exists
+  // Expose form handler globally (inline onsubmit needs it) and attach via addEventListener
+  window.hfs = hfs;
   if (ppRootEl) {
     const form = ppRootEl.querySelector('form');
     if (form) form.addEventListener('submit', hfs);
