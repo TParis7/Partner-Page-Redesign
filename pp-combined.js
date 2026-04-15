@@ -279,7 +279,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 <div class="ctn"><div class="hero-g">
 <div class="hero-t">
   <h1>Where student journeys become <span class="tc">institutional intelligence</span></h1>
-  <p class="hero-d">P3 is the AI-powered mentorship platform that connects underserved students with industry mentors — and turns those connections into the outcome data your institution needs.</p>
+  <p class="hero-d">Technology alone cannot change a student's trajectory — people do. We merge human mentorship with AI tools to generate powerful outcome data.</p>
   <div class="hero-cta"><a href="https://calendar.app.google/HWHVSUkDqED55EXf7" target="_blank" class="btn bp bl ba">Schedule a Demo</a><a href="#resources" class="btn bo">Download a Deck</a></div>
 </div>
 <div class="hero-net">
