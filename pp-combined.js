@@ -1,3 +1,8 @@
+/* pp-combined.js — Partner/Institutions page
+   Last update: 2026-04-21
+   • Hero height harmonization: min-height 80vh → 550px, padding 100/0/64 → 100/0/40
+     (matches fm-hero on For Students / For Mentors so logo carousel aligns across pages on big screens)
+*/
 (function() {
   // Load Google Fonts
   const fonts = document.createElement('link');
@@ -33,7 +38,7 @@ h1{font-size:clamp(2rem,4vw,3.25rem);}h2{font-size:clamp(1.6rem,3.5vw,2.625rem);
 .p3-nav.scrolled { background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(20px) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
 
 /* ===== HERO ===== */
-.hero{position:relative;display:flex;align-items:center;background:linear-gradient(135deg,var(--md),var(--m) 40%,#2a0e16);overflow:hidden;padding:100px 0 64px;min-height:80vh;}
+.hero{position:relative;display:flex;align-items:center;background:linear-gradient(135deg,var(--md),var(--m) 40%,#2a0e16);overflow:hidden;padding:100px 0 40px;min-height:550px;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(217,58,58,.1),transparent 55%);pointer-events:none;}
 .hero-g{position:relative;z-index:2;display:grid;grid-template-columns:5fr 7fr;gap:24px;align-items:center;}
 .hero-t{max-width:500px;}.hero h1{color:var(--wh);margin-bottom:16px;}
